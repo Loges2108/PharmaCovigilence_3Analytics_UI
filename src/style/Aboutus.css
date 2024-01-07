@@ -1,0 +1,83 @@
+.CenteredImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ImageWithBorder {
+  border-radius: 50%;
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.FlipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+.FlipCardFront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.FlipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary); /* Use your primary color variable */
+  color: white;
+  transform: rotateY(180deg);
+  font-weight: bolder;
+}
+
+.FlipCard {
+  min-width: 250px;
+  height: 300px;
+  position: relative;
+  border-radius: 20px !important;
+  perspective: 1000px;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+.FlipCard:hover .FlipCardInner {
+  transform: rotateY(180deg);
+}
+
+.Overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.64);
+}

@@ -1,0 +1,20 @@
+.ContactContainer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px;
+}
+
+.AddressContainer {
+  text-align: center;
+}
+
+.GoogleMapContainer {
+  text-align: center;
+  height: 200px;
+}
+
+.Divider {
+  background-color: #fff; /* Change this color to suit your design */
+  width: 2px;
+  height: 100%;
+}
